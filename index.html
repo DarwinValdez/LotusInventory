@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="loginContainer" class="login-container">
+
+        <form id="loginForm">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="loginError" style="color: red; display: none;">Usuario o contraseña incorrectos.</p>
+    </div>
+
+    <div id="inventoryButtonContainer" style="display: none;">
+        <button id="inventoryButton">Inventario</button>
+    </div>
+
+    <div id="inventoryContainer" style="display: none;">
+        <div class="container">
+            <h1>Sistema de Inventario</h1>
+            <div class="container">
+                <form id="productForm">
+                    <label for="rowNumber">Número de Fila:</label>
+                    <input type="text" id="rowNumber" name="rowNumber" required>
+
+                    <label for="productName">Nombre del Producto:</label>
+                    <input type="text" id="productName" name="productName" required>
+
+                    <label for="expiryDate">Fecha de Expiración:</label>
+                    <input type="date" id="expiryDate" name="expiryDate" required>
+
+                    <button type="submit">Agregar Producto</button>
+                </form>
+
+                <table id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>Número de Fila</th>
+                            <th>Nombre del Producto</th>
+                            <th>Fecha de Expiración</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
